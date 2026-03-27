@@ -2,13 +2,15 @@
 #include <fcfs.hpp>
 #include <vector>
 #include <iostream>
+#include <statistics.hpp>
 
 int main()
 {
-    std::vector<Process> processes = {{0, 5}, {2, 3}, {4, 1}};
+    std::vector<Process> processes = {{1, 0 , 5}, {2, 1, 3}, {3, 2, 8}};
     FCFS obj;
     obj.schedule(processes);
-    std::cout<<"Done and dusted\n";
+    ganttChart(processes);
+    processStats(processes);
 
     return 0;
 }

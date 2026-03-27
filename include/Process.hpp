@@ -5,6 +5,7 @@
 class Process
 {
     public:
+    int pid;
     int arrivalTime;
     int runTime;
     int turnAroundTime;
